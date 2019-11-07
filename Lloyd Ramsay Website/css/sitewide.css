@@ -107,6 +107,7 @@ body {
 
 .global-nav a {
 		text-decoration: none;
+		color: #010328;
 }
 
 a:visited{
@@ -531,6 +532,7 @@ a:visited{
 }
 .video1 a{
 	text-decoration: none;
+	color: #010328;
 }
 
 .eggs{
@@ -545,6 +547,7 @@ a:visited{
 }
 .video2 a{
 	text-decoration: none;
+	color: #010328;
 }
 
 .treadmill{
@@ -559,6 +562,7 @@ a:visited{
 }
 .video3 a{
 	text-decoration: none;
+	color: #010328;
 }
 
 a:visited{
@@ -576,6 +580,7 @@ a:visited{
 }
 .video4 a{
 	text-decoration: none;
+	color: #010328;
 }
 /*end late night section*/
 
