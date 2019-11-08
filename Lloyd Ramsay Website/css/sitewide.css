@@ -1,0 +1,1204 @@
+/* ------------------------------------------------------------ */
+/* imports and utilities */
+
+/* 3rd-party CSS files */
+@import 'vendor/h5bp-head.css';
+@import 'vendor/normalize.css';
+@import 'vendor/h5bp-tail.css';
+
+/* use a more intuitive box sizing model (http://is.gd/wNVjAo) */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* Scale down images and embedded videos so they don't overflow their parents */
+img, object { max-width: 100%; }
+
+/*	Development/layout aid. Remove the comments
+	on this rule in order to draw boxes around DIVs
+	and other elements used for layout. */
+/*
+div, main, article, section, aside, hgroup, header, footer, address, nav {
+	border: 1px solid rgba(255,0,0,0.15) !important;
+	background: rgba(255,0,0,0.05) !important;
+}
+*/
+
+
+/* ------------------------------------------------------------ */
+/* start project-specifc styles below this line */
+
+body {
+	font-family: "Cantarell", "Noto Sans", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5em;
+	color: #222;
+}
+
+/*	Generally, you will only want one container element in
+	the document, wrapping around the main content area.
+	If you have more than one container, you are probably doing
+	something wrong.
+*/
+.container {
+	background-color: #FFFAFA;
+}
+
+.header {
+	background-color: #FFFAFA;
+}
+
+
+
+/* ------------------------------------------------------------ */
+/* media query containing styles for larger screens */
+@media (min-width: 720px) {
+
+	/* container on larger screens */
+	.container {
+		width: 100%;
+		max-width: 2400px;
+		margin: 0em;
+		margin-right: auto;
+		margin-left: auto;
+		padding: 1em;
+		padding-left: 4em;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+.header {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.title{
+	grid-column-start: 1;
+	grid-column-end: 2;
+	padding-left: .5em;
+}
+.title a{
+	text-decoration: none;
+	padding-bottom: 0;
+}
+
+.global-nav {
+	grid-column-start: 2;
+	grid-column-end: 3;
+}
+
+.global-nav ul {
+	display: flex;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-column: 2 / 3;
+	padding: 10px;
+	margin-top: 8em;
+	padding-left: 0;
+	padding-bottom: 16px;
+	border-bottom-style: solid;
+	border-bottom-width: thick;
+	border-bottom-color: #FF7518;
+	text-align: center;
+}
+
+.global-nav li {
+	flex: 0;
+	padding: 10px;
+	text-align: center;
+	list-style-type: none;
+}
+
+.global-nav a {
+		text-decoration: none;
+		color: #010328;
+}
+
+a:visited{
+	color: #010328;
+}
+
+.title{
+	font-size: 70px;
+	line-height: 65px;
+	color: #010223;
+	border-bottom-style: solid;
+	border-bottom-width: thick;
+	border-bottom-color: #FF7518;
+	padding-bottom: 21px;
+}
+
+.heading{
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row: 3/4;
+	line-height: 10em;
+	font-size: 40px;
+	color: #010223;
+	text-align: center;
+}
+
+.caption{
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row: 3/4;
+	line-height: 1em;
+	font-size: 40px;
+	color: #010223;
+	text-align: center;
+}
+
+.sub{
+	font-family: "Cantarell";
+	font-size: 40px;
+	font-weight: 300;
+	color: #F8B86B;
+	grid-column-start: 1;
+	grid-column-end: 3;
+	line-height: 40px;
+}
+
+.recipename{
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+.subcaption{
+	font-size: 15px;
+	font-weight: 100px;
+	color: #FF7518;
+}
+
+.video{
+	grid-column: 1/3;
+	grid-row: 2/3;
+	height: auto;
+}
+
+.welcome{
+	grid-columns: 1/2;
+	grid-row: 4/5;
+	color: #010328;
+	margin-bottom: 5em;
+}
+
+.row{
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row: 5/6;
+	display: flex;
+}
+
+.column{
+	flex: 20%;
+	padding: 5px;
+}
+/*section for media */
+.mediaabout{
+	grid-columns: 1/2;
+	grid-row: 2/3;
+	padding-top: 0;
+	padding-bottom: 2em;
+}
+
+/*begin editting for about section */
+.ramsay{
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row: 2/3;
+}
+
+.aboutintro{
+	grid-column-start: 1/3;
+	grid-row: 3/4;
+	border-bottom-style: solid;
+	border-bottom-width: medium;
+	border-bottom-color: #FF7518;
+	padding-bottom: 2em;
+}
+
+.paragraph-1{
+	grid-column: 1/2;
+	grid-row: 4/5;
+	border-bottom-style: solid;
+	border-bottom-width: medium;
+	border-bottom-color: #FF7518;
+	padding-bottom: 2em;
+}
+
+.about-1{
+	grid-column: 2/3;
+	grid-row: 4/5;
+	display: block;
+	background-color: #FEEADB;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	padding: 1em;
+	padding-top: 8em;
+}
+
+.paragraph-2{
+	grid-column: 1/2;
+	grid-row: 5/6;
+	border-bottom-style: solid;
+	border-bottom-width: medium;
+	border-bottom-color: #FF7518;
+	padding-bottom: 2em;
+}
+
+.about-2{
+	grid-column: 2/3;
+	grid-row: 5/6;
+	display: block;
+	background-color: #FEEADB;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	padding: 1em;
+	padding-top: 8em;
+}
+
+.paragraph-3{
+	grid-column: 1/2;
+	grid-row: 6/7;
+	border-bottom-style: solid;
+	border-bottom-width: medium;
+	border-bottom-color: #FF7518;
+	padding-bottom: 2em;
+}
+
+.about-3{
+	grid-column: 2/3;
+	grid-row: 6/7;
+	display: block;
+	background-color: #FEEADB;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	padding: 1em;
+	padding-top: 8em;
+}
+
+.paragraph-4{
+	grid-column: 1/2;
+	grid-row: 7/8;
+	border-bottom-style: solid;
+	border-bottom-width: medium;
+	border-bottom-color: #FF7518;
+	padding-bottom: 2em;
+}
+
+.about-4{
+	grid-column: 2/3;
+	grid-row: 7/8;
+	display: block;
+	background-color: #FEEADB;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	padding: 1em;
+	padding-top: 8em;
+}
+
+.paragraph-5{
+	grid-column: 1/2;
+	grid-row: 8/9;
+	border-bottom-style: solid;
+	border-bottom-width: medium;
+	border-bottom-color: #FF7518;
+	padding-bottom: 2em;
+}
+
+.about-5{
+	grid-column: 2/3;
+	grid-row: 8/9;
+	display: block;
+	background-color: #FEEADB;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	padding: 1em;
+	padding-top: 8em;
+	vertical-align: center;
+}
+
+.paragraph-6{
+	grid-column: 1/2;
+	grid-row: 9/10;
+	padding-bottom: 2em;
+}
+
+.about-6{
+	grid-column: 2/3;
+	grid-row: 9/10;
+	display: block;
+	background-color: #FEEADB;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	padding: 1em;
+	padding-top: 10em;
+}
+/*end about section */
+/*begin images for twitter and media */
+.twitter{
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row: 3/4;
+	text-align: center;
+	border-top-style: solid;
+	border-top-width: medium;
+	border-top-color: #FF7518;
+	padding-top: 2em;
+}
+
+.dog{
+	grid-columns: 1/2;
+	grid-row: 4/5;
+	padding: 1em;
+}
+
+.pan{
+	grid-columns: 2/3;
+	grid-row: 4/5;
+	padding: 1em;
+	align-content: center;
+}
+
+.pizza{
+	grid-columns: 1/2;
+	grid-row: 5/6;
+	padding: 1em;
+}
+
+.toast{
+	grid-columns: 2/3;
+	grid-row: 5/6;
+	padding: 1em;
+}
+
+.marry{
+	grid-columns: 1/2;
+	grid-row: 6/7;
+	padding: 1em;
+}
+
+.divorce{
+	grid-columns: 2/3;
+	grid-row: 6/7;
+	padding: 1em;
+}
+
+.grandma{
+	grid-columns: 1/2;
+	grid-row: 7/8;
+	padding: 1em;
+}
+
+.grandpa{
+	grid-columns: 2/3;
+	grid-row: 7/8;
+	padding: 1em;
+}
+
+.twitterend{
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row: 8/9;
+	text-align: center;
+	font-size: 15px;
+	border-bottom-style: solid;
+	border-bottom-width: medium;
+	border-bottom-color: #FF7518;
+	padding-bottom: 2em;
+	margin-bottom: 2em;
+}
+/*end images for media */
+
+/* begin television description and images */
+.television{
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row: 9/10;
+	text-align: center;
+}
+
+.hellskitchen{
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row: 10/11;
+	line-height: 20px;
+	padding-bottom: 5em;
+	border-top-style: solid;
+	border-top-width: medium;
+	border-top-color: #FF7518;
+	position: relative;
+	margin: 0;
+}
+.hellskitchen .content{
+	position: absolute; /* Position the background text */
+  top: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.8); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+}
+
+.kitchennightmare{
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row: 11/12;
+	line-height: 20px;
+	padding-bottom: 5em;
+	border-top-style: solid;
+	border-top-width: medium;
+	border-top-color: #FF7518;
+	position: relative;
+	margin: 0;
+}
+.kitchennightmare .content{
+	position: absolute; /* Position the background text */
+  top: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.8); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+}
+
+.masterchef{
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row: 12/13;
+	line-height: 20px;
+	padding-bottom: 5em;
+	border-top-style: solid;
+	border-top-width: medium;
+	border-top-color: #FF7518;
+	position: relative;
+	margin: 0;
+}
+.masterchef .content{
+	position: absolute; /* Position the background text */
+  top: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.8); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+}
+
+.word{
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row: 13/14;
+	line-height: 20px;
+	padding-bottom: 5em;
+	border-top-style: solid;
+	border-top-width: medium;
+	border-top-color: #FF7518;
+	position: relative;
+	margin: 0;
+}
+.word .content{
+	position: absolute; /* Position the background text */
+  top: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.8); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+}
+
+/*end television blurb and photos */
+/*being late night section*/
+.youtube{
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row: 14/15;
+	text-align: center;
+	border-top-style: solid;
+	border-top-width: medium;
+	border-top-color: #FF7518;
+}
+
+.guts{
+	grid-column: 1/2;
+	grid-row: 15/16;
+}
+
+.video1{
+	grid-column: 2/3;
+	grid-row: 15/16;
+	padding: 1em;
+}
+.video1 a{
+	text-decoration: none;
+	color: #010328;
+}
+
+.eggs{
+	grid-column: 1/2;
+	grid-row: 16/17;
+}
+
+.video2{
+	grid-column: 2/3;
+	grid-row: 16/17;
+	padding: 1em;
+}
+.video2 a{
+	text-decoration: none;
+	color: #010328;
+}
+
+.treadmill{
+	grid-column: 1/2;
+	grid-row: 17/18;
+}
+
+.video3{
+	grid-column: 2/3;
+	grid-row: 17/18;
+	padding: 1em;
+}
+.video3 a{
+	text-decoration: none;
+	color: #010328;
+}
+
+a:visited{
+	color: #010328;
+}
+.swear{
+	grid-column: 1/2;
+	grid-row: 18/19;
+}
+
+.video4{
+	grid-column: 2/3;
+	grid-row: 18/19;
+	padding: 1em;
+}
+.video4 a{
+	text-decoration: none;
+	color: #010328;
+}
+/*end late night section*/
+
+/*begin grid format for r&r */
+.label{
+	font-size: 20px;
+}
+
+.headimage{
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row: 2/3;
+}
+
+.box-a{
+	grid-column: 1/2;
+	grid-row: 3/4;
+}
+
+.map{
+	grid-column-start: 1;
+	grid-column-end: 5;
+	text-align: center;
+	font-size: 25px;
+	color: #010223;
+}
+
+.USMap{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-column: 1/3;
+	grid-row: 4/5;
+	background-color: #FEEADB;
+	padding: 1em;
+	margin-top: 2em;
+}
+
+.image-a{
+	grid-column-start: 1;
+	grid-column-end: 5;
+}
+
+.map2{
+	grid-column-start: 1;
+	grid-column-end: 5;
+	text-align: center;
+	font-size: 25px;
+	color: #010223;
+}
+
+.EuroMap{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-column: 1/3;
+	grid-row: 6/7;
+	background-color: #FEEADB;
+	padding: 1em;
+	margin-top: 2em;
+}
+
+.image-b{
+	grid-column-start: 1;
+	grid-column-end: 5;
+}
+
+.map3{
+	grid-column-start: 1;
+	grid-column-end: 8;
+	text-align: center;
+	font-size: 25px;
+	color: #010223;
+}
+
+.InternationalMap{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-column: 1/3;
+	grid-row: 8/9;
+	background-color: #FEEADB;
+	padding: 1em;
+	margin-top: 2em;
+}
+
+.image-c{
+	grid-column-start: 1;
+	grid-column-end: 8;
+}
+/*end section for restaurants */
+
+/*begin section for recipes */
+.spring{
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row: 3/4;
+	font-size: 40px;
+	color: #010223;
+	text-align: center;
+	border-top-style: solid;
+	border-top-width: medium;
+	border-top-color: #FF7518;
+	padding-top: 1em;
+}
+
+.style{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #010328;
+}
+.text{
+	color: #ffffff;
+	padding: 5em;
+	font-size: 18px;
+}
+.text a{
+	text-decoration: none;
+	color: #FF7518;
+}
+.recipe-1{
+	grid-column: 1/2;
+	grid-row: 4/5;
+	text-align: center;
+	padding: .5em;
+	position: relative;
+	width: 100%
+}
+
+.recipe-1:hover .overlay{
+	opacity: 1;
+}
+
+.recipe-2{
+	grid-column: 2/3;
+	grid-row: 5/6;
+	text-align: center;
+	padding: .5em;
+	position: relative;
+	width: 100%;
+}
+.recipe-2:hover .overlay{
+	opacity: 1;
+}
+
+.recipe-3{
+	grid-column: 1/2;
+	grid-row: 5/6;
+	text-align: center;
+	padding: .5em;
+	position: relative;
+	width: 100%
+}
+
+.recipe-3:hover .overlay{
+	opacity: 1;
+}
+
+.recipe-4{
+	grid-column: 2/3;
+	grid-row: 4/5;
+	text-align: center;
+	padding: .5em;
+	position: relative;
+	width: 100%
+}
+
+.recipe-4:hover .overlay{
+	opacity: 1;
+}
+
+.summer{
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row: 6/7;
+	font-size: 40px;
+	color: #010223;
+	text-align: center;
+	border-top-style: solid;
+	border-top-width: medium;
+	border-top-color: #FF7518;
+	padding-top: 1em;
+}
+
+.recipe-5{
+	grid-column: 1/2;
+	grid-row: 7/8;
+	text-align: center;
+	padding-left: .5em;
+	padding-right: .5em;
+	position: relative;
+	width: 100%
+}
+.recipe-5:hover .overlay{
+	opacity: 1;
+}
+
+.recipe-6{
+	grid-column: 2/3;
+	grid-row: 8/9;
+	text-align: center;
+	padding: .5em;
+	position: relative;
+	width: 100%
+}
+.recipe-6:hover .overlay{
+	opacity: 1;
+}
+
+.recipe-7{
+	grid-column: 1/2;
+	grid-row: 8/9;
+	text-align: center;
+	padding: .5em;
+	position: relative;
+	width: 100%
+}
+.recipe-7:hover .overlay{
+	opacity: 1;
+}
+
+.recipe-8{
+	grid-column: 2/3;
+	grid-row: 7/8;
+	text-align: center;
+	padding: .5em;
+	position: relative;
+	width: 100%
+}
+.recipe-8:hover .overlay{
+	opacity: 1;
+}
+
+.fall{
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row: 9/10;
+	font-size: 40px;
+	color: #010223;
+	text-align: center;
+	border-top-style: solid;
+	border-top-width: medium;
+	border-top-color: #FF7518;
+	padding-top: 1em;
+}
+
+.recipe-9{
+	grid-column: 1/2;
+	grid-row: 10/11;
+	text-align: center;
+	padding: .5em;
+	position: relative;
+	width: 100%
+}
+.recipe-9:hover .overlay{
+	opacity: 1;
+}
+
+.recipe-10{
+	grid-column: 2/3;
+	grid-row: 10/11;
+	text-align: center;
+	padding: .5em;
+	position: relative;
+	width: 100%
+}
+.recipe-10:hover .overlay{
+	opacity: 1;
+}
+
+.recipe-11{
+	grid-column: 1/2;
+	grid-row: 11/12;
+	text-align: center;
+	padding: .5em;
+	position: relative;
+	width: 100%
+}
+.recipe-11:hover .overlay{
+	opacity: 1;
+}
+
+.recipe-12{
+	grid-column: 2/3;
+	grid-row: 11/12;
+	text-align: center;
+	padding: .5em;
+	position: relative;
+	width: 100%
+}
+.recipe-12:hover .overlay{
+	opacity: 1;
+}
+
+.winter{
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row: 12/13;
+	font-size: 40px;
+	color: #010223;
+	text-align: center;
+	border-top-style: solid;
+	border-top-width: medium;
+	border-top-color: #FF7518;
+	padding-top: 1em;
+}
+
+.recipe-13{
+	grid-column: 1/2;
+	grid-row: 13/14;
+	text-align: center;
+	padding: .5em;
+	position: relative;
+	width: 100%
+}
+.recipe-13:hover .overlay{
+	opacity: 1;
+}
+
+.recipe-14{
+	grid-column: 1/2;
+	grid-row: 14/15;
+	text-align: center;
+	padding: .5em;
+	position: relative;
+	width: 100%
+}
+.recipe-14:hover .overlay{
+	opacity: 1;
+}
+
+.recipe-15{
+	grid-column: 2/3;
+	grid-row: 13/14;
+	text-align: center;
+	padding: .5em;
+	position: relative;
+	width: 100%
+}
+.recipe-15:hover .overlay{
+	opacity: 1;
+}
+
+.recipe-16{
+	grid-column: 2/3;
+	grid-row: 14/15;
+	text-align: center;
+	padding: .5em;
+	position: relative;
+	width: 100%
+}
+.recipe-16:hover .overlay{
+	opacity: 1;
+}
+
+.Thanksgiving{
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row: 15/16;
+	font-size: 40px;
+	color: #010223;
+	text-align: center;
+	border-top-style: solid;
+	border-top-width: medium;
+	border-top-color: #FF7518;
+	padding-top: 1em;
+}
+
+.recipe-17{
+	grid-column: 1/2;
+	grid-row: 16/17;
+	text-align: center;
+	padding: .5em;
+	position: relative;
+	width: 100%
+}
+.recipe-17:hover .overlay{
+	opacity: 1;
+}
+
+.recipe-18{
+	grid-column: 2/3;
+	grid-row: 16/17;
+	text-align: center;
+	padding: .5em;
+	position: relative;
+	width: 100%
+}
+.recipe-18:hover .overlay{
+	opacity: 1;
+}
+
+.recipe-19{
+	grid-column: 1/2;
+	grid-row: 17/18;
+	text-align: center;
+	padding: .5em;
+	position: relative;
+	width: 100%
+}
+.recipe-19:hover .overlay{
+	opacity: 1;
+}
+
+.recipe-20{
+	grid-column: 2/3;
+	grid-row: 17/18;
+	text-align: center;
+	padding: .5em;
+	position: relative;
+	width: 100%
+}
+.recipe-20:hover .overlay{
+	opacity: 1;
+}
+
+.christmas{
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row: 18/19;
+	font-size: 40px;
+	color: #010223;
+	text-align: center;
+	border-top-style: solid;
+	border-top-width: medium;
+	border-top-color: #FF7518;
+	padding-top: 1em;
+}
+
+.recipe-21{
+	grid-column: 1/2;
+	grid-row: 19/20;
+	text-align: center;
+	padding: .5em;
+	position: relative;
+	width: 100%
+}
+.recipe-21:hover .overlay{
+	opacity: 1;
+}
+
+.recipe-22{
+	grid-column: 2/3;
+	grid-row: 19/20;
+	text-align: center;
+	padding: .5em;
+	position: relative;
+	width: 100%
+}
+.recipe-22:hover .overlay{
+	opacity: 1;
+}
+
+.recipe-23{
+	grid-column: 1/2;
+	grid-row: 20/21;
+	text-align: center;
+	padding: .5em;
+	position: relative;
+	width: 100%
+}
+.recipe-23:hover .overlay{
+	opacity: 1;
+}
+
+.recipe-24{
+	grid-column: 2/3;
+	grid-row: 20/21;
+	text-align: center;
+	padding: .5em;
+	position: relative;
+	width: 100%
+}
+.recipe-24:hover .overlay{
+	opacity: 1;
+}
+/*end recipes section */
+
+/*begin uncharted section */
+.unchartedvideo{
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row: 1/2;
+}
+
+.Uncharted{
+	padding-top: 4em;
+	padding-bottom: 3em;
+}
+.peru{
+	grid-column: 1/3;
+	grid-row: 4/5;
+	padding-bottom: 5em;
+	border-top-style: solid;
+	border-top-width: medium;
+	border-top-color: #FF7518;
+	position: relative;
+	margin: 0;
+}
+.peru .content{
+	position: absolute; /* Position the background text */
+  top: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+}
+
+.zealand{
+	grid-column: 1/3;
+	grid-row: 5/6;
+	padding-bottom: 5em;
+	border-top-style: solid;
+	border-top-width: medium;
+	border-top-color: #FF7518;
+	position: relative;
+	margin: 0;
+}
+.zealand .content{
+	position: absolute; /* Position the background text */
+  top: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+}
+
+.morocco{
+	grid-column: 1/3;
+	grid-row: 6/7;
+	padding-bottom: 5em;
+	border-top-style: solid;
+	border-top-width: medium;
+	border-top-color: #FF7518;
+	position: relative;
+	margin: 0;
+}
+.morocco .content{
+	position: absolute; /* Position the background text */
+  top: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+}
+
+.hawaii{
+	grid-column: 1/3;
+	grid-row: 7/8;
+	padding-bottom: 5em;
+	border-top-style: solid;
+	border-top-width: medium;
+	border-top-color: #FF7518;
+	position: relative;
+	margin: 0;
+}
+.hawaii .content{
+	position: absolute; /* Position the background text */
+  top: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+}
+
+.laos{
+	grid-column: 1/3;
+	grid-row: 8/9;
+	padding-bottom: 5em;
+	border-top-style: solid;
+	border-top-width: medium;
+	border-top-color: #FF7518;
+	position: relative;
+	margin: 0;
+}
+.laos .content{
+	position: absolute; /* Position the background text */
+  top: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+}
+
+.alaska{
+	grid-column: 1/3;
+	grid-row: 9/10;
+	padding-bottom: 5em;
+	border-top-style: solid;
+	border-top-width: medium;
+	border-top-color: #FF7518;
+	position: relative;
+	margin: 0;
+}
+.alaska .content{
+	position: absolute; /* Position the background text */
+  top: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+}
+
+} /* end media query */
