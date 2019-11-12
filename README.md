@@ -1,7 +1,5 @@
-# web1-basic
-
-Starter files for intro web design/development
-
+Colleen Lloyd 
+7 November 2019
 This is the first major project in our class. The assignment was to take a wikipedia article and create a website out of it. I chose Gordon Ramsay since he has a fascinating public life and some fun aspects, ranging from his public appearances to recipes.
 
 Image Cites:
